@@ -149,7 +149,8 @@ class _CartaoGrupo extends StatelessWidget {
               child: Row(children: [
                 Expanded(child: Text(i.nome.isEmpty ? '(sem nome)' : i.nome)),
                 CampoValor(
-                  key: ValueKey('v-${i.id}-$mes'),
+                  // PageStorageKey: sem ela, a rolagem interna do TextField lê o estado (bool) do ExpansionTile.
+                  key: PageStorageKey('v-${i.id}-$mes'),
                   valor: repo.dados.valor(i.id, mes),
                   pendente: repo.estaPendente(i.id, mes),
                   rotulo: i.nome,
