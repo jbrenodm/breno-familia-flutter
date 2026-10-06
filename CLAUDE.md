@@ -1,4 +1,4 @@
-# CLAUDE.md — breno-financeiro-app
+# CLAUDE.md — breno-familia-flutter
 
 Instruções para agentes de IA (Claude Code) neste repositório. Leia tudo antes de alterar código.
 

@@ -1,4 +1,4 @@
-import 'package:breno_financeiro/data/modelo.dart';
+import 'package:breno_familia_flutter/data/modelo.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {

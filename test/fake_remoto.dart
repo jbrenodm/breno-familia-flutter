@@ -1,4 +1,4 @@
-import 'package:breno_financeiro/data/remoto.dart';
+import 'package:breno_familia_flutter/data/remoto.dart';
 
 /// Servidor falso em memória, com o mesmo comportamento que importa do Supabase:
 /// upsert por chave, updated_at definido pelo servidor e consulta "alterados desde".

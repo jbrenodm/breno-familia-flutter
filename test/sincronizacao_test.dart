@@ -1,6 +1,6 @@
-import 'package:breno_financeiro/data/armazenamento.dart';
-import 'package:breno_financeiro/data/modelo.dart';
-import 'package:breno_financeiro/data/repositorio.dart';
+import 'package:breno_familia_flutter/data/armazenamento.dart';
+import 'package:breno_familia_flutter/data/modelo.dart';
+import 'package:breno_familia_flutter/data/repositorio.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import 'fake_remoto.dart';

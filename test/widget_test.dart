@@ -1,5 +1,5 @@
-import 'package:breno_financeiro/ui/comum.dart';
-import 'package:breno_financeiro/ui/tema.dart';
+import 'package:breno_familia_flutter/ui/comum.dart';
+import 'package:breno_familia_flutter/ui/tema.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 

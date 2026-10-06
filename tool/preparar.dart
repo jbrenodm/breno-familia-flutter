@@ -8,7 +8,7 @@ Future<void> main() async {
     stdout.writeln('Gerando plataformas Android e Windows…');
     final r = await Process.run(
       'flutter',
-      ['create', '--platforms=android,windows', '--org', 'br.dev.breno', '--project-name', 'breno_financeiro', '.'],
+      ['create', '--platforms=android,windows', '--org', 'br.dev.breno', '--project-name', 'breno_familia_flutter', '.'],
       runInShell: true,
     );
     stdout.write(r.stdout);
@@ -24,7 +24,7 @@ Future<void> main() async {
       final m = RegExp(r'<manifest[^>]*>').firstMatch(s)!;
       s = s.replaceRange(m.end, m.end, '\n    <uses-permission android:name="android.permission.INTERNET"/>');
     }
-    s = s.replaceAll('android:label="breno_financeiro"', 'android:label="Controle Financeiro"');
+    s = s.replaceAll('android:label="breno_familia_flutter"', 'android:label="Controle Financeiro"');
     manifest.writeAsStringSync(s);
     stdout.writeln('✓ AndroidManifest.xml');
   }
@@ -32,7 +32,7 @@ Future<void> main() async {
   // Windows: título da janela.
   final mainCpp = File('windows/runner/main.cpp');
   if (mainCpp.existsSync()) {
-    final s = mainCpp.readAsStringSync().replaceAll('L"breno_financeiro"', 'L"Controle Financeiro"');
+    final s = mainCpp.readAsStringSync().replaceAll('L"breno_familia_flutter"', 'L"Controle Financeiro"');
     mainCpp.writeAsStringSync(s);
     stdout.writeln('✓ windows/runner/main.cpp');
   }

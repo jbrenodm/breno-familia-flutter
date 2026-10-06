@@ -1,4 +1,4 @@
-# breno-financeiro-app — Controle Financeiro Pessoal (Flutter)
+# breno-familia-flutter — Controle Financeiro Pessoal (Flutter)
 
 Versão 2 do [breno-financeiro](https://github.com/jbrenodm/breno-financeiro), agora como app **Android e Windows**,
 com os dados no **Supabase** (Postgres na nuvem, região São Paulo).
