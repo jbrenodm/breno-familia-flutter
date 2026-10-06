@@ -35,7 +35,7 @@ Android Studio (para o SDK Android) e, para o app Windows, Visual Studio com *De
 
 ```powershell
 copy env.example.json env.json      # e preencha URL e chave do passo 1.5 (env.json não vai para o git)
-dart run tool/preparar.dart         # 1ª vez: gera as pastas android/ e windows/ e aplica os ajustes
+dart run tool/preparar.dart         # opcional: confere os ajustes de android/ e windows/ (já versionadas)
 flutter pub get
 flutter run -d windows --dart-define-from-file=env.json
 flutter run -d <celular>  --dart-define-from-file=env.json   # celular com depuração USB

@@ -16,8 +16,9 @@ App Flutter (**Android e Windows**) de controle financeiro pessoal do Breno e da
 - Flutter estável (≥ 3.35), Material 3, sem gerenciador de estado externo: `Repositorio` (ChangeNotifier) + `RepoScope` (InheritedNotifier).
 - Dependências: `supabase_flutter`, `path_provider`, `uuid`, `file_picker`, `intl`. **Não adicione pacotes sem o usuário pedir**
   (nada de Riverpod/Bloc/fl_chart/drift). Gráficos são `CustomPainter` em `ui/graficos.dart`.
-- Plataformas: só Android e Windows. As pastas `android/` e `windows/` são geradas por `dart run tool/preparar.dart`
-  (ajustes: permissão INTERNET no manifest, nome do app, título da janela). Se mudar um ajuste, mude no script.
+- Plataformas: só Android e Windows. As pastas `android/` e `windows/` foram geradas por `dart run tool/preparar.dart`
+  (ajustes: permissão INTERNET no manifest, nome do app, título da janela) e estão versionadas no git. Se mudar um ajuste,
+  mude no script e no arquivo versionado.
 - Configuração por `--dart-define-from-file=env.json` (`SUPABASE_URL`, `SUPABASE_ANON_KEY`). `env.json` nunca vai para o git.
 
 ## Mapa do código
