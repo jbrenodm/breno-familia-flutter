@@ -9,7 +9,7 @@ Future<void> main() async {
   if (Config.valida) {
     // A sessão fica salva no aparelho e é renovada sozinha (refresh token): login persistente.
     try {
-      await Supabase.initialize(url: Config.supabaseUrl, anonKey: Config.supabaseAnonKey);
+      await Supabase.initialize(url: Config.supabaseUrl, publishableKey: Config.supabaseAnonKey);
     } catch (e) {
       // Sem internet ao abrir: a sessão salva continua valendo e é renovada quando a conexão voltar.
       debugPrint('Supabase.initialize: $e');
