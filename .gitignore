@@ -1,0 +1,25 @@
+# Flutter/Dart
+.dart_tool/
+.packages
+.pub-cache/
+.pub/
+build/
+.flutter-plugins
+.flutter-plugins-dependencies
+*.iml
+.idea/
+# Android
+android/local.properties
+android/key.properties
+android/app/upload-keystore.jks
+*.keystore
+*.jks
+# Windows
+windows/flutter/ephemeral/
+# Segredos e dados: nunca no repositório
+env.json
+*.env
+backup*.json
+controle-financeiro-*.json
+*.xlsx
+*.csv
