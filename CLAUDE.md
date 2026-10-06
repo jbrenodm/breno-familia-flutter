@@ -88,9 +88,11 @@ flutter build apk --release --dart-define-from-file=env.json
 4. `flutter analyze && flutter test`. 5. Atualize README.md e docs/decisoes.md quando for decisão de arquitetura.
 6. Commits em português, no imperativo, curtos. Não faça push nem crie PR sem o usuário pedir.
 
-## O que NÃO foi validado ainda
+## Validação
 
-O código foi escrito sem acesso ao SDK Flutter (ambiente sem rede para pub.dev). Primeira tarefa ao abrir o projeto:
-`dart run tool/preparar.dart && flutter pub get && flutter analyze && flutter test` e corrigir o que aparecer.
-Depois: rodar o SQL num projeto Supabase real, testar login persistente (fechar/reabrir, reiniciar o celular), offline
-(modo avião → lançar → voltar) e tempo real entre dois aparelhos.
+Já validado (out/2026, Flutter 3.47, supabase_flutter 2.18): `flutter analyze` e `flutter test` limpos; app rodando no
+Windows e no Android (Galaxy A55, Android 16); `0001_inicial.sql` aplicado num projeto Supabase real; login e conexão
+funcionando.
+
+Ainda falta testar: login persistente (fechar/reabrir, reiniciar o celular), offline (modo avião → lançar → voltar) e
+tempo real entre dois aparelhos.

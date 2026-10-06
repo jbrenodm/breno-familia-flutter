@@ -22,8 +22,10 @@ As telas são as mesmas: **Gráficos**, **Mês**, **Resumo** e **Ajustes**. No c
    Assim só entram as contas que você criar.
 4. **Authentication → Users → Add user → Create new user**: crie a sua conta e a da Jaqueline
    (marque *Auto Confirm User*).
-5. **Project Settings → API**: copie a **Project URL** e a chave **publishable** (ou *anon public*).
-   Essa chave não é segredo: a proteção vem do login e das regras RLS do passo 2.
+5. Botão verde **Connect** no topo do painel (ou **Project Settings → Data API**): copie a **Project URL**,
+   só a base `https://<id>.supabase.co`, **sem** `/rest/v1/` no final.
+   Em **Project Settings → API Keys**, copie a chave **Publishable** (`sb_publishable_...`). Nunca use a *Secret key*.
+   A chave publishable não é segredo: a proteção vem do login e das regras RLS do passo 2.
 
 > Plano gratuito: o projeto é pausado depois de 7 dias sem **nenhum** acesso (reativa-se no painel com um clique).
 > Ele não tem backup para download; use **Ajustes → Exportar backup** de vez em quando.
@@ -40,6 +42,15 @@ flutter pub get
 flutter run -d windows --dart-define-from-file=env.json
 flutter run -d <celular>  --dart-define-from-file=env.json   # celular com depuração USB
 ```
+
+Android, se o build falhar:
+
+- `flutter doctor` acusa *cmdline-tools component is missing*: instale **Android SDK Command-line Tools** no SDK Manager
+  do Android Studio (aba *SDK Tools*).
+- *Android sdkmanager did not install NDK ...*: desde as Command-line Tools 23 o `sdkmanager` repassa para o novo Android CLI
+  e o Gradle não consegue mais instalar o NDK sozinho. Instale a versão pedida no erro pelo SDK Manager do Android Studio
+  (*SDK Tools → NDK (Side by side)*, marcando *Show Package Details*).
+- O emulador precisa de ~12 GB livres no disco e bastante RAM; com 16 GB de RAM, prefira o celular por USB.
 
 Gerar os instaladores:
 
